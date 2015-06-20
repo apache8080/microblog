@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+    <p>Click <a href="/logout">here</a> to logout.</p>
+    <h1>Home</h1>
+        <p>Hi, {{user.uname}}</p> 
+    <h2>Posts in the Community</h2>
+
+    {% for post in posts %}
+    <div><p>{{ post.author.uname}} says: <b>{{ post.post_body }}</b></p></div>
+    {% endfor %}
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <p>Click <a href="/logout">here</a> to logout.</p>
+  <h1>Create Post</h1>
+  <form action="" method="post" name="login">
+      {{ form.hidden_tag() }}
+      <p>
+          Post Title:<br>
+          {{ form.post_title(size=80) }}<br>
+      </p>
+      <p>
+          Post:<br>
+          {{ form.post_content(cols="100", rows="20") }}<br>
+      </p>
+      <p><input type="submit" value="Post it!"></p>
+  </form>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Create Post</h1>
+  <form action="" method="post" name="login">
+      {{ form.hidden_tag() }}
+      <p>
+          Post Title:<br>
+          {{ form.uname(size=80) }}<br>
+      </p>
+      <p>
+          Post:<br>
+          {{ form.email(size=300) }}<br>
+      </p>
+      <p><input type="submit" value="Post it!"></p>
+  </form>
+{% endblock %}
